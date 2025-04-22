@@ -1,0 +1,55 @@
+# .NET 8 build output
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider project files
+.idea/
+*.sln.iml
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# ASP.NET runtime generated files
+appsettings.Development.json
+*.db
+*.sqlite
+*.log
+
+# Visual Studio Code (if used)
+.vscode/
+
+# Package directories
+node_modules/
+bower_components/
+wwwroot/lib/
+
+# Logs
+*.log
+logs/
+
+# Dotnet-specific
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Secrets (if any)
+secrets.json
+
+# Test results
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+# Temporary files
+~$*
+*.tmp
