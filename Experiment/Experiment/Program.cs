@@ -1,3 +1,4 @@
+using Experiment.Services;
 using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,9 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
     var configuration = "localhost:6379"; // 可改成從 appsettings.json 讀取
     return ConnectionMultiplexer.Connect(configuration);
 });
+// 註冊自定義服務與背景工作者
+builder.Services.AddSingleton<RedisQueueService>();
+builder.Services.AddHostedService<QueueWorker>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
